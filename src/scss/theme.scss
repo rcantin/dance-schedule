@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700;900&display=swap");
+
+@import "./pallette.scss";
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$body-bg: $light;
+
+$font-family-base: "Source Sans Pro", sans-serif;
+$link-decoration: none;
+
+$form-label-margin-bottom: 0.25rem;
+
+$btn-font-weight: 900;
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+$headings-font-weight: 700;
+$headings-margin-bottom: 0.5em;
+
+$offcanvas-horizontal-width: 380px;
+$offcanvas-body-backdrop-color: rgba($dark, 0.6);
+
+$dropdown-dark-bg: $dark;
+$dropdown-dark-border-color: $dark;
+
+$modal-backdrop-opacity: 0.2;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
