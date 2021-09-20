@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/vuejs-sandbox/" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/dance-schedule/" : "/",
 };
