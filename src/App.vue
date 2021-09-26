@@ -1,6 +1,221 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-  </div> -->
-  <router-view />
+  <div class="container pt-3">
+    <!-- <div class="text-center pb-4">
+      <Nav />
+    </div> -->
+    <router-view :classdata="classdata" />
+  </div>
 </template>
+
+<script>
+import { v4 as uuid } from "uuid";
+// import Nav from "@/components/Nav.vue";
+
+export default {
+  name: "App",
+  components: {
+    // Nav,
+  },
+  data() {
+    return {
+      classdetail: null,
+      classdata: [
+        {
+          id: uuid(),
+          type: "choreo",
+          name: "Solo - Hip Hop",
+          routine: [
+            {
+              name: "-",
+              hair: "-",
+              jewelry: "-",
+              shoes: "-",
+              tights: "-",
+              costume: "-",
+            },
+          ],
+          day: "monday",
+          start: "2021-01-01T17:00:00",
+          end: "2021-01-01T17:30:00",
+          instructor: "Catina",
+          location: "TBD",
+          clothing: "Black bodysuit, black sweatpants",
+          shoes: "Runners (clean)",
+          hair: "Ponytail or bun",
+        },
+        {
+          id: uuid(),
+          type: "tech",
+          name: "Mini Stretch",
+          day: "monday",
+          start: "2021-01-01T16:30:00",
+          end: "2021-01-01T17:30:00",
+          instructor: "Catina",
+          location: "Studio 2",
+          clothing: "Comfortable, tight-fitting, stretchy",
+          shoes: "None",
+          equipment: "Blocks, Yoga Mat",
+          hair: "Ponytail or braid",
+        },
+        {
+          id: uuid(),
+          type: "choreo",
+          name: "Mini Lyrical Choreo",
+          routine: [
+            {
+              name: "-",
+              hair: "-",
+              jewelry: "-",
+              shoes: "-",
+              tights: "-",
+              costume: "-",
+            },
+          ],
+          day: "monday",
+          start: "2021-01-01T17:30:00",
+          end: "2021-01-01T18:20:00",
+          instructor: "Catina",
+          location: "Studio 2",
+          clothing: "Pink or beige tights, black bodysuit",
+          shoes: "None or footpaws",
+          hair: "Bun",
+        },
+        {
+          id: uuid(),
+          type: "tech",
+          name: "Mini Ballet Tech",
+          day: "monday",
+          start: "2021-01-01T18:30:00",
+          end: "2021-01-01T19:30:00",
+          instructor: "Irina",
+          location: "Studio 2",
+          clothing: "Pink tights, black bodysuit",
+          shoes: "Ballet shoes",
+          hair: "Bun",
+        },
+        {
+          id: uuid(),
+          type: "tech",
+          name: "Mini Ballet Tech",
+          day: "tuesday",
+          start: "2021-01-01T16:30:00",
+          end: "2021-01-01T17:30:00",
+          instructor: "Irina",
+          location: "Studio 5",
+          clothing: "Pink tights, black bodysuit",
+          shoes: "Ballet shoes",
+          hair: "Bun",
+        },
+        {
+          id: uuid(),
+          type: "choreo",
+          name: "Mini Jazz Large Choreo (with Small Fries)",
+          routine: [
+            {
+              name: "-",
+              hair: "-",
+              jewelry: "-",
+              shoes: "-",
+              tights: "-",
+              costume: "-",
+            },
+          ],
+          day: "tuesday",
+          start: "2021-01-01T17:30:00",
+          end: "2021-01-01T18:30:00",
+          instructor: "Sarah/Catina",
+          location: "Studio 5",
+          clothing: "Pink or beige tights, black bodysuit",
+          shoes: "Jazz shoes",
+          hair: "Bun or ponytail",
+        },
+        {
+          id: uuid(),
+          type: "choreo",
+          name: "Mini Hip Hop Tech & Choreo",
+          day: "tuesday",
+          routine: [
+            {
+              name: "-",
+              hair: "-",
+              jewelry: "-",
+              shoes: "-",
+              tights: "-",
+              costume: "-",
+            },
+          ],
+          start: "2021-01-01T18:45:00",
+          end: "2021-01-01T19:30:00",
+          instructor: "Catina",
+          location: "Studio 4",
+          clothing: "Pink or beige tights, black bodysuit",
+          shoes: "Runners (CLEAN)",
+          hair: "Bun or ponytail",
+        },
+        {
+          id: uuid(),
+          type: "tech",
+          name: "Mini Jazz Tech",
+          day: "wednesday",
+          start: "2021-01-01T17:30:00",
+          end: "2021-01-01T18:15:00",
+          instructor: "Catina/Sarah",
+          location: "Studio 5",
+          clothing: "Pink or beige tights, black bodysuit",
+          shoes: "Jazz shoes",
+          hair: "Bun or ponytail",
+        },
+        {
+          id: uuid(),
+          type: "tech",
+          name: "Mini Gym",
+          day: "thursday",
+          start: "2021-01-01T16:30:00",
+          end: "2021-01-01T17:30:00",
+          instructor: "Brittany",
+          location: "Gym",
+          clothing: "Comfortable, tight-fitting, stretchy",
+          shoes: "None",
+          hair: "Ponytail or braid",
+        },
+        {
+          id: uuid(),
+          type: "tech",
+          name: "Mini Tap Tech",
+          day: "thursday",
+          start: "2021-01-01T18:00:00",
+          end: "2021-01-01T18:30:00",
+          instructor: "David",
+          location: "Studio 4",
+          clothing: "Pink or beige tights, black bodysuit",
+          shoes: "Tap shoes",
+          hair: "Bun or ponytail",
+        },
+        {
+          id: uuid(),
+          type: "choreo",
+          name: "Mini Tap Choreo",
+          day: "thursday",
+          routine: [
+            {
+              name: "-",
+              hair: "-",
+              jewelry: "-",
+              shoes: "-",
+              tights: "-",
+              costume: "-",
+            },
+          ],
+          start: "2021-01-01T18:30:00",
+          end: "2021-01-01T19:15:00",
+          instructor: "David",
+          location: "Studio 4",
+          clothing: "Pink or beige tights, black bodysuit",
+          shoes: "Tap shoes",
+          hair: "Bun or ponytail",
+        },
+      ],
+    };
+  },
+};
+</script>

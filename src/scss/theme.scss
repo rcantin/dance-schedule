@@ -6,16 +6,17 @@
 @import "../../node_modules/bootstrap/scss/variables";
 
 $body-bg: $light;
+// $font-size-base: 18px;
 
 $font-family-base: "Source Sans Pro", sans-serif;
-$link-decoration: none;
+// $link-decoration: none;
 
 $form-label-margin-bottom: 0.25rem;
 
-$btn-font-weight: 900;
+// $btn-font-weight: 900;
 .btn {
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
 }
 
 $headings-font-weight: 700;
