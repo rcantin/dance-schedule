@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
-// import Home from "@/views/Home.vue";
+import Home from "@/views/Home.vue";
 import Schedule from "@/views/Schedule.vue";
-import Classes from "@/views/Classes.vue";
+import CostumeCards from "@/views/CostumeCards.vue";
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Schedule,
+    component: Home,
   },
   {
     path: "/schedule",
@@ -15,9 +15,9 @@ const routes = [
     component: Schedule,
   },
   {
-    path: "/classes",
-    name: "Classes",
-    component: Classes,
+    path: "/cards",
+    name: "Cards",
+    component: CostumeCards,
   },
 ];
 

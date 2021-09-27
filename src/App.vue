@@ -1,20 +1,18 @@
 <template>
-  <div class="container pt-3">
-    <!-- <div class="text-center pb-4">
-      <Nav />
-    </div> -->
+  <Nav />
+  <div class="container">
     <router-view :classdata="classdata" />
   </div>
 </template>
 
 <script>
 import { v4 as uuid } from "uuid";
-// import Nav from "@/components/Nav.vue";
+import Nav from "@/components/Nav.vue";
 
 export default {
   name: "App",
   components: {
-    // Nav,
+    Nav,
   },
   data() {
     return {
@@ -23,6 +21,7 @@ export default {
         {
           id: uuid(),
           type: "choreo",
+          style: "hip hop",
           name: "Solo - Hip Hop",
           routine: [
             {
@@ -32,6 +31,12 @@ export default {
               shoes: "-",
               tights: "-",
               costume: "-",
+              // name: "The Queen of Swagger",
+              // hair: "High ponytail",
+              // jewelry: "Earrings",
+              // shoes: "Orange/black hightops",
+              // tights: "None",
+              // costume: "Black hoodie, orange sweatpants",
             },
           ],
           day: "monday",
@@ -46,6 +51,7 @@ export default {
         {
           id: uuid(),
           type: "tech",
+          style: "stretch",
           name: "Mini Stretch",
           day: "monday",
           start: "2021-01-01T16:30:00",
@@ -60,6 +66,7 @@ export default {
         {
           id: uuid(),
           type: "choreo",
+          style: "lyrical",
           name: "Mini Lyrical Choreo",
           routine: [
             {
@@ -69,6 +76,12 @@ export default {
               shoes: "-",
               tights: "-",
               costume: "-",
+              // name: "Circle of Life",
+              // hair: "Middle part, low bun",
+              // jewelry: "Earrings, choker",
+              // shoes: "None",
+              // tights: "Beige",
+              // costume: "Green bodysuit",
             },
           ],
           day: "monday",
@@ -83,6 +96,7 @@ export default {
         {
           id: uuid(),
           type: "tech",
+          style: "ballet",
           name: "Mini Ballet Tech",
           day: "monday",
           start: "2021-01-01T18:30:00",
@@ -96,6 +110,7 @@ export default {
         {
           id: uuid(),
           type: "tech",
+          style: "ballet",
           name: "Mini Ballet Tech",
           day: "tuesday",
           start: "2021-01-01T16:30:00",
@@ -109,6 +124,7 @@ export default {
         {
           id: uuid(),
           type: "choreo",
+          style: "jazz",
           name: "Mini Jazz Large Choreo (with Small Fries)",
           routine: [
             {
@@ -118,6 +134,12 @@ export default {
               shoes: "-",
               tights: "-",
               costume: "-",
+              // name: "Wizard of Ahhhs",
+              // hair: "Middle part, low bun",
+              // jewelry: "Earrings, choker",
+              // shoes: "Black jazz",
+              // tights: "Black fishnets over beige",
+              // costume: "Yellow skirt, blue bodysuit",
             },
           ],
           day: "tuesday",
@@ -132,6 +154,7 @@ export default {
         {
           id: uuid(),
           type: "choreo",
+          style: "hip hop",
           name: "Mini Hip Hop Tech & Choreo",
           day: "tuesday",
           routine: [
@@ -142,6 +165,12 @@ export default {
               shoes: "-",
               tights: "-",
               costume: "-",
+              // name: "Parents Just Don't Understand",
+              // hair: "High ponytail",
+              // jewelry: "Earrings",
+              // shoes: "Purple runners",
+              // tights: "None",
+              // costume: "Jeans, white t-shirt",
             },
           ],
           start: "2021-01-01T18:45:00",
@@ -155,6 +184,7 @@ export default {
         {
           id: uuid(),
           type: "tech",
+          style: "jazz",
           name: "Mini Jazz Tech",
           day: "wednesday",
           start: "2021-01-01T17:30:00",
@@ -168,6 +198,7 @@ export default {
         {
           id: uuid(),
           type: "tech",
+          style: "gym",
           name: "Mini Gym",
           day: "thursday",
           start: "2021-01-01T16:30:00",
@@ -181,6 +212,7 @@ export default {
         {
           id: uuid(),
           type: "tech",
+          style: "tap",
           name: "Mini Tap Tech",
           day: "thursday",
           start: "2021-01-01T18:00:00",
@@ -194,6 +226,7 @@ export default {
         {
           id: uuid(),
           type: "choreo",
+          style: "tap",
           name: "Mini Tap Choreo",
           day: "thursday",
           routine: [
@@ -204,6 +237,12 @@ export default {
               shoes: "-",
               tights: "-",
               costume: "-",
+              // name: "Flying Feet of Fury",
+              // hair: "Middle part low bun",
+              // jewelry: "Earrings",
+              // shoes: "Beige tap",
+              // tights: "Beige",
+              // costume: "Green tuxedo",
             },
           ],
           start: "2021-01-01T18:30:00",

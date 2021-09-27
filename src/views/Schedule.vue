@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1 class="text-center">Amelia's Schedule</h1>
+
     <div
       class="modal fade"
       id="modalClassDetail"
@@ -25,10 +27,9 @@
       </div>
     </div>
 
-    <h2 class="text-center">Amelia's Schedule</h2>
-    <div v-if="classdata">
+    <div v-if="classdata" style="max-width: 800px" class="mx-auto">
       <table
-        class="table table-borderless table-sm"
+        class="table table-borderless"
         v-for="(day, indexday) in [
           'monday',
           'tuesday',
@@ -42,7 +43,7 @@
       >
         <tbody v-if="getClassesByDay(day).length > 0">
           <tr>
-            <th colspan="2" class="text-capitalize pt-4">
+            <th colspan="2" class="text-capitalize pt-2">
               {{ day }}
             </th>
           </tr>
@@ -59,9 +60,6 @@
                 @click="setClassDetail(item)"
                 >{{ item.name }}</a
               >
-              <!-- <span v-if="item.type" class="small fw-light"
-                >&nbsp;({{ item.type }})</span
-              > -->
             </td>
             <td class="text-nowrap fw-light text-end">
               {{ moment(item.start).format("h:mmA") }} -
