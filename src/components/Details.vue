@@ -16,36 +16,36 @@
             {{ moment(this.classdata.end).format("h:mmA") }}
           </td>
         </tr>
-        <tr>
+        <tr v-if="this.classdata.instructor">
           <td class="fw-light">Instructor</td>
           <td>
             {{ this.classdata.instructor ? this.classdata.instructor : "n/a" }}
           </td>
         </tr>
-        <tr>
+        <tr v-if="this.classdata.location">
           <td class="fw-light">Location</td>
           <td>
             {{ this.classdata.location ? this.classdata.location : "n/a" }}
           </td>
         </tr>
-        <tr>
+        <tr v-if="this.classdata.clothing">
           <td class="fw-light">Clothing</td>
           <td>
             {{ this.classdata.clothing ? this.classdata.clothing : "n/a" }}
           </td>
         </tr>
-        <tr>
+        <tr v-if="this.classdata.hair">
           <td class="fw-light">Hair</td>
           <td>{{ this.classdata.hair ? this.classdata.hair : "n/a" }}</td>
         </tr>
-        <tr>
+        <tr v-if="this.classdata.equipment">
           <td class="fw-light">Equipment</td>
           <td>
             {{ this.classdata.equipment ? this.classdata.equipment : "n/a" }}
           </td>
         </tr>
       </tbody>
-      <tbody v-if="this.classdata.type == 'choreo'">
+      <tbody v-if="this.classdata.type === 'choreo'">
         <tr>
           <th colspan="2" class="pt-4">Competition &amp; Routine</th>
         </tr>
